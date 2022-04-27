@@ -6,13 +6,12 @@ export const styles = StyleSheet.create({
     homeProduct: {
         paddingLeft: 10,
         paddingRight: 10,
-        flex: 1,
-        backgroundColor: colors.secondary,
+        backgroundColor: colors.secondary,  
     },
     homeProduct_menu: {
-        flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     homeProduct_menu_item: {
         flexDirection: 'column',
@@ -41,8 +40,8 @@ export const styles = StyleSheet.create({
     },
 
 
-    homeProduct_product: {
-        flex: 1,
-        backgroundColor: 'yellow'
-    }
+    // homeProduct_product: {
+    //     flex: 1,
+    //     backgroundColor: 'yellow'
+    // }
 })
