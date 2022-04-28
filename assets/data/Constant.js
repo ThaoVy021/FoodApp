@@ -147,12 +147,12 @@ export const expensive = 3
 export const restaurantData = [
     {
         id: 1,
-        name: "ByProgrammers Burger",
+        name: "Burgers Story",
         rating: 4.8,
         categories: [5, 7],
         priceRating: affordable,
         photo: burger_restaurant_1,
-        duration: "30 - 45 min",
+        duration: "25 - 30 min",
         location: {
             latitude: 1.5347282806345879,
             longitude: 110.35632207358996,
@@ -190,7 +190,7 @@ export const restaurantData = [
     },
     {
         id: 2,
-        name: "ByProgrammers Pizza",
+        name: "Pizza Story",
         rating: 4.8,
         categories: [2, 4, 6],
         priceRating: expensive,
@@ -241,7 +241,7 @@ export const restaurantData = [
     },
     {
         id: 3,
-        name: "ByProgrammers Hotdogs",
+        name: "Hotdogs Story",
         rating: 4.8,
         categories: [3],
         priceRating: expensive,
@@ -268,7 +268,7 @@ export const restaurantData = [
     },
     {
         id: 4,
-        name: "ByProgrammers Sushi",
+        name: "Sushi Story",
         rating: 4.8,
         categories: [8],
         priceRating: expensive,
@@ -295,7 +295,7 @@ export const restaurantData = [
     },
     {
         id: 5,
-        name: "ByProgrammers Cuisine",
+        name: "Cuisine Story",
         rating: 4.8,
         categories: [1, 2],
         priceRating: affordable,
@@ -348,7 +348,7 @@ export const restaurantData = [
     {
 
         id: 6,
-        name: "ByProgrammers Dessets",
+        name: "Dessets Story",
         rating: 4.9,
         categories: [9, 10],
         priceRating: affordable,

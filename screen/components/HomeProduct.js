@@ -1,4 +1,4 @@
-import { Text, View, Image, FlatList, TouchableOpacity } from 'react-native'
+import { Text, View, Image, FlatList, TouchableOpacity, ImageBackground } from 'react-native'
 import React, { Component } from 'react'
 import { styles } from './HomeProductStyle'
 import { categoryData, restaurantData } from '../../assets/data/Constant'
@@ -15,13 +15,18 @@ const renderCategoies = ({item}) => {
 }
 
 const renderCategoiesInformation = ({item}) => {
+    // console.log(item.menu)
     return (
-        <View style={{flex: 1, flexDirection: 'column'}}>
+        <View>
+            <View style={styles.homeProduct_detail_item_contain_img}>
+                <TouchableOpacity>
+                    <ImageBackground style={styles.homeProduct_detail_item_img} source={item.photo}/>
+                    <Text style={styles.homeProduct_detail_item_img_duration}>{item.duration}</Text>
+                </TouchableOpacity>
+            </View>
+            
             <TouchableOpacity>
-                <Image style={styles.homeProduct_detail_item_img} source={item.photo}/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Text>{item.name}</Text>
+                <Text style={styles.homeProduct_detail_item_name}>{item.name}</Text>
             </TouchableOpacity>
         </View>
     )
@@ -42,8 +47,7 @@ export default HomeProduct = () => {
 
             <View style={styles.homeProduct_detail}>
                 <FlatList
-                    horizontal={true}
-                    showsHorizontalScrollIndicator={false}
+                    showsVerticalScrollIndicator={false}
                     contentContainerStyle={styles.homeProduct_detail_item}
                     data={restaurantData}
                     renderItem={renderCategoiesInformation}
