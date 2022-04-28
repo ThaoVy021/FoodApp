@@ -8,21 +8,22 @@ export const styles = StyleSheet.create({
         paddingRight: 10,
         backgroundColor: colors.secondary,  
     },
-    homeProduct_menu: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center'
+    homeProduct_categoies: {
+        flexDirection: 'row', 
+        flexWrap: 'nowrap',
     },
     homeProduct_menu_item: {
         flexDirection: 'column',
-        height: 140,
+        height: 120,
         backgroundColor: colors.white,  
         padding: 10,
-        borderRadius: 50
+        borderRadius: 50, 
+        marginRight: 15,
+        alignItems: 'center'
     },
     homeProduct_menu_item_contain_img: {
-        width:60, 
-        height: 60,
+        width:50, 
+        height: 50,
         backgroundColor: colors.secondary, 
         alignItems: 'center',
         justifyContent: 'center',
@@ -40,8 +41,17 @@ export const styles = StyleSheet.create({
     },
 
 
-    // homeProduct_product: {
-    //     flex: 1,
-    //     backgroundColor: 'yellow'
-    // }
+    homeProduct_detail: {
+        
+    },
+    homeProduct_detail_item: {
+        flexDirection: 'column', 
+        flexWrap: 'nowrap',
+    },
+    homeProduct_detail_item_img: {
+        width: '100%',
+        height: 300,
+        resizeMode: 'cover',
+        aspectRatio: 1
+    },
 })

@@ -1,30 +1,9 @@
 import { Text, View, Image, FlatList, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
 import { styles } from './HomeProductStyle'
-import { icons, categoryData, restaurantData } from '../../assets/data/Constant'
+import { categoryData, restaurantData } from '../../assets/data/Constant'
 
-// const category = []
-// const restaurant = []
-
-// for (let i = 0; i < categoryData.length; i++) {
-//     category.push(
-//         <View style={styles.homeProduct_menu_item}>
-//             <View style={styles.homeProduct_menu_item_contain_img}>
-//                 <Image style={styles.homeProduct_menu_item_img} source={categoryData[i].icon}/>
-//             </View>
-//             <View style={styles.homeProduct_menu_item_dish}><Text>{categoryData[i].name}</Text></View>
-//         </View>
-//     )
-// }
-// for (let i = 0; i < restaurantData.length; i++) {
-//     restaurant.push(
-//         <View style={styles.homeProduct_restaurant_item}>
-            
-//         </View>
-//     )
-// }
-
-const renderItem = ({item}) => {
+const renderCategoies = ({item}) => {
     return (
         <TouchableOpacity style={styles.homeProduct_menu_item}>
             <View style={styles.homeProduct_menu_item_contain_img}>
@@ -35,17 +14,40 @@ const renderItem = ({item}) => {
     )
 }
 
+const renderCategoiesInformation = ({item}) => {
+    return (
+        <View style={{flex: 1, flexDirection: 'column'}}>
+            <TouchableOpacity>
+                <Image style={styles.homeProduct_detail_item_img} source={item.photo}/>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <Text>{item.name}</Text>
+            </TouchableOpacity>
+        </View>
+    )
+}
+
 export default HomeProduct = () => {
     return (
         <View style={styles.homeProduct}>
-            <View style={styles.homeProduct_menu}>
+            <View>
                 <FlatList
-                    style={{flexDirection: 'row'}}
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={styles.homeProduct_categoies}
                     data={categoryData}
-                    renderItem={renderItem}
+                    renderItem={renderCategoies}
                 />
             </View>
-            <View style={styles.homeProduct_menu}>
+
+            <View style={styles.homeProduct_detail}>
+                <FlatList
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={styles.homeProduct_detail_item}
+                    data={restaurantData}
+                    renderItem={renderCategoiesInformation}
+                />
             </View>
         </View>
     )
