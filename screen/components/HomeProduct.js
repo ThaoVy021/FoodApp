@@ -1,7 +1,7 @@
 import { Text, View, Image, FlatList, TouchableOpacity, ImageBackground } from 'react-native'
 import React, { Component } from 'react'
 import { styles } from './HomeProductStyle'
-import { categoryData, restaurantData } from '../../assets/data/Constant'
+import { icons, categoryData, restaurantData } from '../../assets/data/Constant'
 
 const renderCategoies = ({item}) => {
     return (
@@ -15,7 +15,6 @@ const renderCategoies = ({item}) => {
 }
 
 const renderCategoiesInformation = ({item}) => {
-    // console.log(item.menu)
     return (
         <View>
             <View style={styles.homeProduct_detail_item_contain_img}>
@@ -28,6 +27,13 @@ const renderCategoiesInformation = ({item}) => {
             <TouchableOpacity>
                 <Text style={styles.homeProduct_detail_item_name}>{item.name}</Text>
             </TouchableOpacity>
+
+            <View style={styles.homeProduct_detail_item_infor}>
+                <Image style={styles.homeProduct_detail_item_infor_imgStar} source={icons.star}/>
+                <Text style={{marginRight: 20}}>{item.rating}</Text>
+                <Text style={{fontWeight: '500'}}>{item.includeDish}</Text>
+                <Text style={{fontWeight: 'bold'}}>$</Text><Text>$$</Text>
+            </View>
         </View>
     )
 }

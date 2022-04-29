@@ -67,11 +67,22 @@ export const styles = StyleSheet.create({
         borderColor: 'transparent',
         overflow: 'hidden',
         fontWeight: 'bold',
+        borderTopRightRadius: 20
     },
     homeProduct_detail_item_name: {
         fontWeight: '500',
         fontSize: 22,
         paddingTop: 10,
-        paddingBottom: 10
-    }
+        paddingBottom: 10,
+    },
+    homeProduct_detail_item_infor: {
+        flex: 1, 
+        flexDirection: 'row', 
+        paddingBottom: 20
+    },
+    homeProduct_detail_item_infor_imgStar: {
+        width: 15, 
+        height: 15, 
+        marginRight:10
+    },
 })

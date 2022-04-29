@@ -148,11 +148,12 @@ export const restaurantData = [
     {
         id: 1,
         name: "Burgers Story",
-        rating: 4.8,
+        rating: 4.9,
         categories: [5, 7],
         priceRating: affordable,
         photo: burger_restaurant_1,
         duration: "25 - 30 min",
+        includeDish: "Burgers - Snacks - ",
         location: {
             latitude: 1.5347282806345879,
             longitude: 110.35632207358996,
@@ -196,6 +197,7 @@ export const restaurantData = [
         priceRating: expensive,
         photo: pizza_restaurant,
         duration: "15 - 20 min",
+        includeDish: "Pizzas - Salads - ",
         location: {
             latitude: 1.556306570595712,
             longitude: 110.35504616746915,
@@ -242,11 +244,12 @@ export const restaurantData = [
     {
         id: 3,
         name: "Hotdogs Story",
-        rating: 4.8,
+        rating: 4.7,
         categories: [3],
         priceRating: expensive,
         photo: hot_dog_restaurant,
         duration: "20 - 25 min",
+        includeDish: "Hot Dogs - ",
         location: {
             latitude: 1.5238753474714375,
             longitude: 110.34261833833622,
@@ -269,11 +272,12 @@ export const restaurantData = [
     {
         id: 4,
         name: "Sushi Story",
-        rating: 4.8,
+        rating: 4.6,
         categories: [8],
         priceRating: expensive,
         photo: japanese_restaurant,
         duration: "10 - 15 min",
+        includeDish: "Sushis - ",
         location: {
             latitude: 1.5578068150528928,
             longitude: 110.35482523764315,
@@ -296,11 +300,12 @@ export const restaurantData = [
     {
         id: 5,
         name: "Cuisine Story",
-        rating: 4.8,
+        rating: 4.5,
         categories: [1, 2],
         priceRating: affordable,
         photo: noodle_shop,
         duration: "15 - 20 min",
+        includeDish: "Noodles - rices - ",
         location: {
             latitude: 1.558050496260768,
             longitude: 110.34743759630511,
@@ -349,11 +354,12 @@ export const restaurantData = [
 
         id: 6,
         name: "Dessets Story",
-        rating: 4.9,
+        rating: 4.4,
         categories: [9, 10],
         priceRating: affordable,
         photo: kek_lapis_shop,
         duration: "35 - 40 min",
+        includeDish: "Shaved Ices - Cakes - ",
         location: {
             latitude: 1.5573478487252896,
             longitude: 110.35568783282145,

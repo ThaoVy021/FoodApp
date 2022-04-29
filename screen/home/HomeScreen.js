@@ -24,22 +24,25 @@ export default HomeScreen = ({navigation}) => {
       {/* <Drawer.Navigator>
         <Drawer.Screen name='detail_draw' component={DetailScreen} />
         <Drawer.Screen name='map_draw' component={MapScreen} />
-      </Drawer.Navigator> 
+      </Drawer.Navigator> */}
 
-        <Tab.Navigator>
-          <Tab.Screen name='detail_tab' component={DetailScreen}/>
-          <Tab.Screen 
-            name='map_tab' 
-            component={MapScreen}
-            options={{
-              tabBarIcon: (focused) => (
-                <Text style={{
-                  color: focused ? 'red' : 'black'
-                }}>Customer</Text>
-              )
-            }}
-          />
-        </Tab.Navigator>*/}
+        <View style={{flex: 1}}>
+          <Tab.Navigator>
+            <Tab.Screen name='detail_tab' component={DetailScreen}/>
+            <Tab.Screen 
+              name='map_tab' 
+              component={MapScreen}
+              options={{
+                tabBarIcon: (focused) => (
+                  <Text style={{
+                    color: focused ? 'red' : 'black'
+                  }}>Customer</Text>
+                )
+              }}
+            />
+          </Tab.Navigator>
+        </View>
+       
       </View>
     )
 }
