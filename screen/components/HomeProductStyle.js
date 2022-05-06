@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     homeProduct: {
         paddingLeft: 20,
         paddingRight: 20,
-        backgroundColor: colors.secondary,  
+        backgroundColor: colors.white,  
     },
     homeProduct_categoies: {
         flexDirection: 'row', 
@@ -19,7 +19,9 @@ export const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 50, 
         marginRight: 15,
-        alignItems: 'center'
+        alignItems: 'center',
+        shadowOpacity: 0.1,
+        shadowRadius: 20
     },
     homeProduct_menu_item_contain_img: {
         width:40, 

@@ -30,11 +30,6 @@ export const icons = {
 }
 
 
-const avatar_1 = require("../images/avatar-1.jpg");
-const avatar_2 = require("../images/avatar-2.jpg");
-const avatar_3 = require("../images/avatar-3.jpg");
-const avatar_4 = require("../images/avatar-4.jpg");
-const avatar_5 = require("../images/avatar-5.jpg");
 const baked_fries = require("../images/baked-fries.jpg");
 const burger_restaurant_1 = require("../images/burger-restaurant.jpg");
 const burger_restaurant_2 = require("../images/burger-restaurant-2.jpg");
@@ -66,80 +61,60 @@ export const colors = {
     white: "#FFFFFF"
 }
 
-// Dummy Datas
-export const initialCurrentLocation = {
-    streetName: "Kuching",
-    gps: {
-        latitude: 1.5496614931250685,
-        longitude: 110.36381866919922
-    }
-}
-
 export const categoryData = [
     {
         id: 1,
         name: "Rice",
         icon: icons.rice_bowl,
-        selected: true
     },
     {
         id: 2,
         name: "Noodles",
         icon: icons.noodle,
-        selected: false
     },
     {
         id: 3,
         name: "Hot Dogs",
         icon: icons.hotdog,
-        selected: false
     },
     {
         id: 4,
         name: "Salads",
         icon: icons.salad,
-        selected: false
     },
     {
         id: 5,
         name: "Burgers",
         icon: icons.hamburger,
-        selected: false
     },
     {
         id: 6,
         name: "Pizza",
         icon: icons.pizza,
-        selected: false
     },
     {
         id: 7,
         name: "Snacks",
         icon: icons.fries,
-        selected: false
     },
     {
         id: 8,
         name: "Sushi",
         icon: icons.sushi,
-        selected: false
     },
     {
         id: 9,
         name: "Desserts",
         icon: icons.donut,
-        selected: false
     },
     {
         id: 10,
         name: "Drinks",
         icon: icons.drink,
-        selected: false
     },
 
 ]
 
-// price rating
 export const affordable = 1
 export const fairPrice = 2
 export const expensive = 3
@@ -154,14 +129,6 @@ export const restaurantData = [
         photo: burger_restaurant_1,
         duration: "25 - 30 min",
         includeDish: "Burgers - Snacks - ",
-        location: {
-            latitude: 1.5347282806345879,
-            longitude: 110.35632207358996,
-        },
-        courier: {
-            avatar: avatar_1,
-            name: "Amy"
-        },
         menu: [
             {
                 menuId: 1,
@@ -198,14 +165,6 @@ export const restaurantData = [
         photo: pizza_restaurant,
         duration: "15 - 20 min",
         includeDish: "Pizzas - Salads - ",
-        location: {
-            latitude: 1.556306570595712,
-            longitude: 110.35504616746915,
-        },
-        courier: {
-            avatar: avatar_2,
-            name: "Jackson"
-        },
         menu: [
             {
                 menuId: 4,
@@ -250,14 +209,6 @@ export const restaurantData = [
         photo: hot_dog_restaurant,
         duration: "20 - 25 min",
         includeDish: "Hot Dogs - ",
-        location: {
-            latitude: 1.5238753474714375,
-            longitude: 110.34261833833622,
-        },
-        courier: {
-            avatar: avatar_3,
-            name: "James"
-        },
         menu: [
             {
                 menuId: 8,
@@ -278,14 +229,6 @@ export const restaurantData = [
         photo: japanese_restaurant,
         duration: "10 - 15 min",
         includeDish: "Sushis - ",
-        location: {
-            latitude: 1.5578068150528928,
-            longitude: 110.35482523764315,
-        },
-        courier: {
-            avatar: avatar_4,
-            name: "Ahmad"
-        },
         menu: [
             {
                 menuId: 9,
@@ -306,14 +249,6 @@ export const restaurantData = [
         photo: noodle_shop,
         duration: "15 - 20 min",
         includeDish: "Noodles - rices - ",
-        location: {
-            latitude: 1.558050496260768,
-            longitude: 110.34743759630511,
-        },
-        courier: {
-            avatar: avatar_4,
-            name: "Muthu"
-        },
         menu: [
             {
                 menuId: 10,
@@ -360,14 +295,6 @@ export const restaurantData = [
         photo: kek_lapis_shop,
         duration: "35 - 40 min",
         includeDish: "Shaved Ices - Cakes - ",
-        location: {
-            latitude: 1.5573478487252896,
-            longitude: 110.35568783282145,
-        },
-        courier: {
-            avatar: avatar_1,
-            name: "Jessie"
-        },
         menu: [
             {
                 menuId: 12,

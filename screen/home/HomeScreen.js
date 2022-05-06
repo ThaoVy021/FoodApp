@@ -8,41 +8,22 @@ import MapScreen from '../map/MapScreen';
 import { icons } from '../../assets/data/Constant';
 import HomeTitle from '../components/HomeTitle';
 import HomeProduct from '../components/HomeProduct';
+import HomeBottomTab from '../components/HomeBottomTab';
+import rootNavigation from '../root-navigation';
 
-const Tab = createBottomTabNavigator()
-const Drawer = createDrawerNavigator();
+// const Drawer = createDrawerNavigator();
+const Tab = createBottomTabNavigator();
 export default HomeScreen = ({navigation}) => {
-  const onPressChuyenPageDetail = () => {
-    navigation.navigate('detail', {
-      hello: "Màn hình Home gửi lời chào"
-    })
-  }
+  
     return(
-      <View>
+      <View style={{flex:1}}>
         <HomeTitle />
         <HomeProduct />
+        <HomeBottomTab />
       {/* <Drawer.Navigator>
         <Drawer.Screen name='detail_draw' component={DetailScreen} />
         <Drawer.Screen name='map_draw' component={MapScreen} />
       </Drawer.Navigator> */}
-
-        <View style={{flex: 1}}>
-          <Tab.Navigator>
-            <Tab.Screen name='detail_tab' component={DetailScreen}/>
-            <Tab.Screen 
-              name='map_tab' 
-              component={MapScreen}
-              options={{
-                tabBarIcon: (focused) => (
-                  <Text style={{
-                    color: focused ? 'red' : 'black'
-                  }}>Customer</Text>
-                )
-              }}
-            />
-          </Tab.Navigator>
-        </View>
-       
       </View>
     )
 }

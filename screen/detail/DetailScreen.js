@@ -1,6 +1,7 @@
 import React from 'react';
 import {TouchableOpacity, Text, View, Platform, ScrollView} from 'react-native';
 import { Component } from 'react/cjs/react.production.min';
+import DetailProduct from '../components/DetailProduct';
 
 export default class DetailScreen extends Component {
   onPressChuyenPageMap = () => {
@@ -11,11 +12,12 @@ export default class DetailScreen extends Component {
     render(){
       return(
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <TouchableOpacity 
+        {/* <TouchableOpacity 
           onPress={this.onPressChuyenPageMap}
         >
           <Text>Chuyển tới trang Map</Text>
-      </TouchableOpacity>    
+        </TouchableOpacity> */}   
+         <DetailProduct/>
         </View>
       )
     }

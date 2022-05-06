@@ -1,10 +1,16 @@
 import { Text, View, Image, FlatList, TouchableOpacity, ImageBackground } from 'react-native'
 import React, { Component } from 'react'
 import { styles } from './HomeProductStyle'
-import { icons, categoryData, restaurantData } from '../../assets/data/Constant'
+import { icons,colors, categoryData, restaurantData } from '../../assets/data/Constant'
 
+state={isClicked:false}
+checkToChangeStyle = () => {
+    this.setState({isClicked:!this.state.isClicked})
+}
 const renderCategoies = ({item}) => {
+    console.log(this.state.isClicked)
     return (
+        // <TouchableOpacity style={[styles.homeProduct_menu_item, this.state.isClicked ? colors.primary : colors.white]} onPress={this.checkToChangeStyle} >
         <TouchableOpacity style={styles.homeProduct_menu_item}>
             <View style={styles.homeProduct_menu_item_contain_img}>
                 <Image style={styles.homeProduct_menu_item_img} source={item.icon}/>
@@ -14,7 +20,12 @@ const renderCategoies = ({item}) => {
     )
 }
 
-const renderCategoiesInformation = ({item}) => {
+const renderCategoiesInformation = ({item, navigation}) => {
+    // const onPressTransferPageDetail = () => {
+    //     navigation.navigate('detail', {
+    //       hello: "Màn hình Home"
+    //     })
+    // }
     return (
         <View>
             <View style={styles.homeProduct_detail_item_contain_img}>
@@ -38,7 +49,7 @@ const renderCategoiesInformation = ({item}) => {
     )
 }
 
-export default HomeProduct = () => {
+export default HomeProduct = ({navigation}) => {
     return (
         <View style={styles.homeProduct}>
             <View>

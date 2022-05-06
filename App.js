@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screen/home/HomeScreen';
 import DetailScreen from './screen/detail/DetailScreen';
 import MapScreen from './screen/map/MapScreen';
+import HomeBottomTab from './screen/components/HomeBottomTab';
 import { icons } from './assets/data/Constant';
 import { style, styles } from './AppStyle';
 
@@ -35,9 +36,27 @@ export default class App extends Component {
               ),
             }}
           />
-          <Stack.Screen name='detail' component={DetailScreen}/>
+          <Stack.Screen 
+            name='detail' 
+            component={DetailScreen}
+            options = {{
+              headerTitle: () => (
+                <TextInput
+                  placeholder="Burgers Story"
+                  placeholderTextColor= 'black'
+                  style={styles.homeHeaderInput}
+                />
+              ),
+              headerLeft: () => (
+                <Image style={styles.homeHeaderImg} source={icons.back}/>
+              ),
+              headerRight: () => (
+                <Image style={styles.homeHeaderImg} source={icons.list}/>
+              ),
+            }}
+          />
           <Stack.Screen name='map' component={MapScreen}/>
-        </Stack.Navigator>
+          </Stack.Navigator>
       </NavigationContainer>
     )
   }
