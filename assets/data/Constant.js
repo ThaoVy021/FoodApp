@@ -30,11 +30,6 @@ export const icons = {
 }
 
 
-const avatar_1 = require("../images/avatar-1.jpg");
-const avatar_2 = require("../images/avatar-2.jpg");
-const avatar_3 = require("../images/avatar-3.jpg");
-const avatar_4 = require("../images/avatar-4.jpg");
-const avatar_5 = require("../images/avatar-5.jpg");
 const baked_fries = require("../images/baked-fries.jpg");
 const burger_restaurant_1 = require("../images/burger-restaurant.jpg");
 const burger_restaurant_2 = require("../images/burger-restaurant-2.jpg");
@@ -66,80 +61,60 @@ export const colors = {
     white: "#FFFFFF"
 }
 
-// Dummy Datas
-export const initialCurrentLocation = {
-    streetName: "Kuching",
-    gps: {
-        latitude: 1.5496614931250685,
-        longitude: 110.36381866919922
-    }
-}
-
 export const categoryData = [
     {
         id: 1,
         name: "Rice",
         icon: icons.rice_bowl,
-        selected: true
     },
     {
         id: 2,
         name: "Noodles",
         icon: icons.noodle,
-        selected: false
     },
     {
         id: 3,
         name: "Hot Dogs",
         icon: icons.hotdog,
-        selected: false
     },
     {
         id: 4,
         name: "Salads",
         icon: icons.salad,
-        selected: false
     },
     {
         id: 5,
         name: "Burgers",
         icon: icons.hamburger,
-        selected: false
     },
     {
         id: 6,
         name: "Pizza",
         icon: icons.pizza,
-        selected: false
     },
     {
         id: 7,
         name: "Snacks",
         icon: icons.fries,
-        selected: false
     },
     {
         id: 8,
         name: "Sushi",
         icon: icons.sushi,
-        selected: false
     },
     {
         id: 9,
         name: "Desserts",
         icon: icons.donut,
-        selected: false
     },
     {
         id: 10,
         name: "Drinks",
         icon: icons.drink,
-        selected: false
     },
 
 ]
 
-// price rating
 export const affordable = 1
 export const fairPrice = 2
 export const expensive = 3
@@ -147,20 +122,13 @@ export const expensive = 3
 export const restaurantData = [
     {
         id: 1,
-        name: "ByProgrammers Burger",
-        rating: 4.8,
+        name: "Burgers Story",
+        rating: 4.9,
         categories: [5, 7],
         priceRating: affordable,
         photo: burger_restaurant_1,
-        duration: "30 - 45 min",
-        location: {
-            latitude: 1.5347282806345879,
-            longitude: 110.35632207358996,
-        },
-        courier: {
-            avatar: avatar_1,
-            name: "Amy"
-        },
+        duration: "25 - 30 min",
+        includeDish: "Burgers - Snacks - ",
         menu: [
             {
                 menuId: 1,
@@ -190,20 +158,13 @@ export const restaurantData = [
     },
     {
         id: 2,
-        name: "ByProgrammers Pizza",
+        name: "Pizza Story",
         rating: 4.8,
         categories: [2, 4, 6],
         priceRating: expensive,
         photo: pizza_restaurant,
         duration: "15 - 20 min",
-        location: {
-            latitude: 1.556306570595712,
-            longitude: 110.35504616746915,
-        },
-        courier: {
-            avatar: avatar_2,
-            name: "Jackson"
-        },
+        includeDish: "Pizzas - Salads - ",
         menu: [
             {
                 menuId: 4,
@@ -241,20 +202,13 @@ export const restaurantData = [
     },
     {
         id: 3,
-        name: "ByProgrammers Hotdogs",
-        rating: 4.8,
+        name: "Hotdogs Story",
+        rating: 4.7,
         categories: [3],
         priceRating: expensive,
         photo: hot_dog_restaurant,
         duration: "20 - 25 min",
-        location: {
-            latitude: 1.5238753474714375,
-            longitude: 110.34261833833622,
-        },
-        courier: {
-            avatar: avatar_3,
-            name: "James"
-        },
+        includeDish: "Hot Dogs - ",
         menu: [
             {
                 menuId: 8,
@@ -268,20 +222,13 @@ export const restaurantData = [
     },
     {
         id: 4,
-        name: "ByProgrammers Sushi",
-        rating: 4.8,
+        name: "Sushi Story",
+        rating: 4.6,
         categories: [8],
         priceRating: expensive,
         photo: japanese_restaurant,
         duration: "10 - 15 min",
-        location: {
-            latitude: 1.5578068150528928,
-            longitude: 110.35482523764315,
-        },
-        courier: {
-            avatar: avatar_4,
-            name: "Ahmad"
-        },
+        includeDish: "Sushis - ",
         menu: [
             {
                 menuId: 9,
@@ -295,20 +242,13 @@ export const restaurantData = [
     },
     {
         id: 5,
-        name: "ByProgrammers Cuisine",
-        rating: 4.8,
+        name: "Cuisine Story",
+        rating: 4.5,
         categories: [1, 2],
         priceRating: affordable,
         photo: noodle_shop,
         duration: "15 - 20 min",
-        location: {
-            latitude: 1.558050496260768,
-            longitude: 110.34743759630511,
-        },
-        courier: {
-            avatar: avatar_4,
-            name: "Muthu"
-        },
+        includeDish: "Noodles - rices - ",
         menu: [
             {
                 menuId: 10,
@@ -348,20 +288,13 @@ export const restaurantData = [
     {
 
         id: 6,
-        name: "ByProgrammers Dessets",
-        rating: 4.9,
+        name: "Dessets Story",
+        rating: 4.4,
         categories: [9, 10],
         priceRating: affordable,
         photo: kek_lapis_shop,
         duration: "35 - 40 min",
-        location: {
-            latitude: 1.5573478487252896,
-            longitude: 110.35568783282145,
-        },
-        courier: {
-            avatar: avatar_1,
-            name: "Jessie"
-        },
+        includeDish: "Shaved Ices - Cakes - ",
         menu: [
             {
                 menuId: 12,

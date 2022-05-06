@@ -1,29 +1,31 @@
 import { StyleSheet } from 'react-native'
 import React, { Component } from 'react'
-import { colors } from '../../assets/data/Constant'
+import { colors, icons } from '../../assets/data/Constant'
 
 export const styles = StyleSheet.create({
     homeProduct: {
-        paddingLeft: 10,
-        paddingRight: 10,
-        flex: 1,
-        backgroundColor: colors.secondary,
+        paddingLeft: 20,
+        paddingRight: 20,
+        backgroundColor: colors.white,  
     },
-    homeProduct_menu: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-around',
+    homeProduct_categoies: {
+        flexDirection: 'row', 
+        flexWrap: 'nowrap',
     },
     homeProduct_menu_item: {
         flexDirection: 'column',
-        height: 140,
+        height: 120,
         backgroundColor: colors.white,  
         padding: 10,
-        borderRadius: 50
+        borderRadius: 50, 
+        marginRight: 15,
+        alignItems: 'center',
+        shadowOpacity: 0.1,
+        shadowRadius: 20
     },
     homeProduct_menu_item_contain_img: {
-        width:60, 
-        height: 60,
+        width:40, 
+        height: 40,
         backgroundColor: colors.secondary, 
         alignItems: 'center',
         justifyContent: 'center',
@@ -41,8 +43,48 @@ export const styles = StyleSheet.create({
     },
 
 
-    homeProduct_product: {
+    homeProduct_detail: {
+        marginTop: 20
+    },
+    homeProduct_detail_item_contain_img: {
+        borderWidth: 1, 
+        borderRadius: 30, 
+        height: 150,
+        borderColor: 'transparent',
         flex: 1,
-        backgroundColor: 'yellow'
-    }
+        overflow: "hidden",
+        position: 'relative'
+    },
+    homeProduct_detail_item_img: {
+        height: 150,
+        resizeMode: 'contain',
+    },
+    homeProduct_detail_item_img_duration: {
+        position: 'absolute',
+        backgroundColor: colors.white,
+        bottom: 0,
+        padding: 10,
+        borderWidth: 1,
+        borderTopRightRadius: 20,
+        borderColor: 'transparent',
+        overflow: 'hidden',
+        fontWeight: 'bold',
+        borderTopRightRadius: 20
+    },
+    homeProduct_detail_item_name: {
+        fontWeight: '500',
+        fontSize: 22,
+        paddingTop: 10,
+        paddingBottom: 10,
+    },
+    homeProduct_detail_item_infor: {
+        flex: 1, 
+        flexDirection: 'row', 
+        paddingBottom: 20
+    },
+    homeProduct_detail_item_infor_imgStar: {
+        width: 15, 
+        height: 15, 
+        marginRight:10
+    },
 })
