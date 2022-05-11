@@ -1,5 +1,5 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, SafeAreaView} from 'react-native';
 import { Component } from 'react/cjs/react.production.min';
 import { createDrawerNavigator} from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -9,21 +9,35 @@ import { icons } from '../../assets/data/Constant';
 import HomeTitle from '../components/HomeTitle';
 import HomeProduct from '../components/HomeProduct';
 import HomeBottomTab from '../components/HomeBottomTab';
-import rootNavigation from '../root-navigation';
-
+import AppBar from './component/AppBar'
+import Categories from './component/Categories'
+import Menu from './component/Menu'
+import styles from './styles/styles'
+import { menuData } from '../../common/Contant';
 // const Drawer = createDrawerNavigator();
-const Tab = createBottomTabNavigator();
+// const Tab = createBottomTabNavigator();
 export default HomeScreen = ({navigation}) => {
+  const [categorySelected, setCategorySelected] = useState(1)
+  let listMenu = menuData.filter(value => value.categoryId == categorySelected)
+    
+  onSelectedCategory = (id) => {
+    setCategorySelected(id)
+  }
   
     return(
-      <View style={{flex:1}}>
-        <HomeTitle />
-        <HomeProduct />
-        <HomeBottomTab />
-      {/* <Drawer.Navigator>
-        <Drawer.Screen name='detail_draw' component={DetailScreen} />
-        <Drawer.Screen name='map_draw' component={MapScreen} />
-      </Drawer.Navigator> */}
-      </View>
-    )
+      <SafeAreaView style={styles.container}>
+      <AppBar />
+      <Categories onSelectedCategory={onSelectedCategory} categorySelected={categorySelected} />
+      <Menu data={listMenu}/>
+      </SafeAreaView>
+  )
 }
+{/* <View style={{flex:1}}>
+<HomeTitle />
+<HomeProduct />
+<HomeBottomTab />
+<Drawer.Navigator>
+<Drawer.Screen name='detail_draw' component={DetailScreen} />
+<Drawer.Screen name='map_draw' component={MapScreen} />
+</Drawer.Navigator>
+</View> */}

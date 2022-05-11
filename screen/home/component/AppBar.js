@@ -1,0 +1,22 @@
+import { View, Text, TouchableOpacity, Image } from 'react-native'
+import React from 'react'
+import { ICONS } from '../../../common/Images'
+import styles from '../styles/styles'
+
+export default function AppBar() {
+  return (
+    <View style={styles.appbar}>
+        <TouchableOpacity style={{justifyContent:'center'}}>
+            <Image style={styles.icon} source={ICONS.nearby} />
+        </TouchableOpacity>
+
+        <View style={styles.app_title}>
+            <Text>745 Lincoln PL</Text>
+        </View>
+
+        <TouchableOpacity style={{justifyContent:'center'}}>
+            <Image style={styles.icon} source={ICONS.shopping_basket} />
+        </TouchableOpacity>
+    </View>
+  )
+}

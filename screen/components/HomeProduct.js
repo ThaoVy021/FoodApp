@@ -8,7 +8,6 @@ checkToChangeStyle = () => {
     this.setState({isClicked:!this.state.isClicked})
 }
 const renderCategoies = ({item}) => {
-    console.log(this.state.isClicked)
     return (
         // <TouchableOpacity style={[styles.homeProduct_menu_item, this.state.isClicked ? colors.primary : colors.white]} onPress={this.checkToChangeStyle} >
         <TouchableOpacity style={styles.homeProduct_menu_item}>
