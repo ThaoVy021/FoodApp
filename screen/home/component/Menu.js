@@ -3,8 +3,11 @@ import React from 'react'
 import { menuData } from '../../../common/Contant'
 import styles from '../styles/styles'
 import { ICONS, IMAGES } from '../../../common/Images'
+import { useSelector } from 'react-redux'
 
-export default function Menu(props) {
+export default function Menu() {
+
+    const menuData = useSelector((state) => state.home.menuData)
 
     renderItem = ({item}) => (
         <TouchableOpacity
@@ -30,7 +33,7 @@ export default function Menu(props) {
 
   return (
     <FlatList 
-        data={props.data}
+        data={menuData}
         renderItem={renderItem}
     />
   )

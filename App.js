@@ -10,19 +10,23 @@ import SearchScreen from './screen/search/SearchScreen';
 import LikeScreen from './screen/like/LikeScreen';
 import UserScreen from './screen/user/UserScreen';
 import CustomBottomTab from './common/Tab';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 const Stack = createStackNavigator();
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}>
-        <Stack.Screen name={screens.home} component={CustomBottomTab} />
-        <Stack.Screen name={screens.detail} component={DetailScreen} />
-        <Stack.Screen name={screens.map} component={MapScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}>
+          <Stack.Screen name={screens.home} component={CustomBottomTab} />
+          <Stack.Screen name={screens.detail} component={DetailScreen} />
+          <Stack.Screen name={screens.map} component={MapScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 }

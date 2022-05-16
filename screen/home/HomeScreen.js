@@ -17,18 +17,13 @@ import { menuData } from '../../common/Contant';
 // const Drawer = createDrawerNavigator();
 // const Tab = createBottomTabNavigator();
 export default HomeScreen = ({navigation}) => {
-  const [categorySelected, setCategorySelected] = useState(1)
-  let listMenu = menuData.filter(value => value.categoryId == categorySelected)
-    
-  onSelectedCategory = (id) => {
-    setCategorySelected(id)
-  }
+ 
   
     return(
       <SafeAreaView style={styles.container}>
       <AppBar />
-      <Categories onSelectedCategory={onSelectedCategory} categorySelected={categorySelected} />
-      <Menu data={listMenu}/>
+      <Categories />
+      <Menu/>
       </SafeAreaView>
   )
 }
